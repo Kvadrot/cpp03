@@ -6,7 +6,7 @@
 /*   By: ufo <ufo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 16:35:08 by ufo               #+#    #+#             */
-/*   Updated: 2025/03/23 11:54:11 by ufo              ###   ########.fr       */
+/*   Updated: 2025/03/27 16:44:38 by ufo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,17 @@ ScavTrap::~ScavTrap() {
 void ScavTrap::guardGate() {
     std::cout << "ScavTrap " << _name << " is now in Gate keeper mode!" << std::endl;
 }
+
+ScavTrap& ScavTrap:: operator=(const ScavTrap& other) {
+    if (this != &other) {
+        _name = other._name;
+        _hitPoints = other._hitPoints;
+        _energyPoints = other._energyPoints;
+        _attackDamage = other._attackDamage;
+    }
+    std::cout << "ScavTrap copy assignment operator called for " << _name << std::endl;
+}
+
 
 // ✅ Override attack()
 void ScavTrap:: attack(const std::string& target) {
