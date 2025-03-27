@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ufo <ufo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/09 16:26:00 by ufo               #+#    #+#             */
-/*   Updated: 2025/03/27 16:40:08 by ufo              ###   ########.fr       */
+/*   Created: 2025/03/27 16:38:03 by ufo               #+#    #+#             */
+/*   Updated: 2025/03/27 17:05:20 by ufo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
-#include <iostream>
-#include <string>
+#include "ClapTrap.hpp"
 
-class ClapTrap {
-private:
+class FragTrap: public ClapTrap {
+protected:
     std::string _name;
     int _hitPoints;
     int _energyPoints;
@@ -25,16 +24,15 @@ private:
 
 public:
     // Constructors & Destructor
-    ClapTrap();  
-    ClapTrap(const std::string& name);
-    ClapTrap(const ClapTrap &other);
-    ClapTrap& operator=(const ClapTrap& other);
-    ~ClapTrap();
+    FragTrap();  
+    FragTrap(const std::string& name);
+    FragTrap(const FragTrap &other);
+    FragTrap& operator=(const FragTrap &other);
+    virtual ~FragTrap();
 
     // Member functions
-    void attack(const std::string& target);
-    void takeDamage(unsigned int amount);
-    void beRepaired(unsigned int amount);
+    void highFivesGuys(void);
 };
+
 
 #endif

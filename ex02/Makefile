@@ -3,11 +3,12 @@ C++_FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC = main.cpp\
 	  ClapTrap.cpp\
-	  ScavTrap.cpp\
+	  ScavTrap.cpp \
+	  FragTrap.cpp \
 
 OBJFILES = $(SRC:.cpp=.o)
 
-NAME = clapTrap01
+NAME = clapTrap02
 
 all: $(NAME)
 

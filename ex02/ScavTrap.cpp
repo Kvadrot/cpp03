@@ -6,13 +6,13 @@
 /*   By: ufo <ufo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 16:35:08 by ufo               #+#    #+#             */
-/*   Updated: 2025/03/27 17:29:45 by ufo              ###   ########.fr       */
+/*   Updated: 2025/03/27 17:24:58 by ufo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-// ✅ Default Constructor
+// Default Constructor
 ScavTrap::ScavTrap() : ClapTrap() {
     _hitPoints = 100;
     _energyPoints = 50;
@@ -20,7 +20,7 @@ ScavTrap::ScavTrap() : ClapTrap() {
     std::cout << "Default constructor called for ScavTrap " << _name << std::endl;
 }
 
-// ✅ Named Constructor
+//  Named Constructor
 ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name) {
     _hitPoints = 100;
     _energyPoints = 50;
@@ -28,7 +28,7 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name) {
     std::cout << "String constructor called for ScavTrap " << _name << std::endl;
 }
 
-// ✅ Copy Constructor
+//  Copy Constructor
 ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other) {
     *this = other;
     std::cout << "Copy constructor called for ScavTrap " << other._name << std::endl;
@@ -44,18 +44,18 @@ ScavTrap& ScavTrap:: operator=(const ScavTrap& other) {
     std::cout << "ScavTrap copy assignment operator called for " << _name << std::endl;
     return (*this);
 }
-// ✅ Destructor
+
+//  Destructor
 ScavTrap::~ScavTrap() {
     std::cout << "Destructor called for ScavTrap " << _name << std::endl;
 }
 
-
-// ✅ Unique Method
+//  Unique Method
 void ScavTrap::guardGate() {
     std::cout << "ScavTrap " << _name << " is now in Gate keeper mode!" << std::endl;
 }
 
-// ✅ Override attack()
+//  Override attack()
 void ScavTrap:: attack(const std::string& target) {
     if (_energyPoints > 0 && _hitPoints > 0) {
         std::cout << "ScavTrap " << _name << " viciously attacks " << target

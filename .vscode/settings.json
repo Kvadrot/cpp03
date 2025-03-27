@@ -43,6 +43,12 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "vector": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "__hash_table": "cpp",
+        "__node_handle": "cpp",
+        "unordered_map": "cpp",
+        "complex": "cpp",
+        "iterator": "cpp",
+        "sstream": "cpp"
     }
 }
