@@ -6,7 +6,7 @@
 /*   By: ufo <ufo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 16:26:00 by ufo               #+#    #+#             */
-/*   Updated: 2025/03/17 11:16:19 by ufo              ###   ########.fr       */
+/*   Updated: 2025/03/27 15:59:50 by ufo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ public:
     ClapTrap();  
     ClapTrap(const std::string& name);
     ClapTrap(const ClapTrap &other);
+    ClapTrap& operator=(const ClapTrap& other); 
     ~ClapTrap();
 
     // Member functions
